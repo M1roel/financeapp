@@ -14,8 +14,7 @@
     color: v.$beige100;
     transition: width 0.3s;
 
-    h2 {
-      @include m.styleFont("PS-Bold", 24px, 400, 1.2, white);
+    svg {
       padding: 32px 40px;
     }
 
