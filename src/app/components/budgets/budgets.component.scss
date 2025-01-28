@@ -1,0 +1,9 @@
+@use "../../../../src/mixins.scss" as m;
+
+.budgets-main {
+
+    h1{
+        @include m.styleFont("PS-Bold", 32px, 400, 1.2);
+        margin: 0;
+    }
+}
