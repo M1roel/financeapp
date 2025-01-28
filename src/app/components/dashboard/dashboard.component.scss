@@ -1,9 +1,22 @@
 @use "../../../../src/mixins.scss" as m;
 
 .overview-main {
+    width: 100%;
+    box-sizing: border-box;
 
     h1{
         @include m.styleFont("PS-Bold", 32px, 400, 1.2);
         margin: 0;
     }
+
+    .balance {
+        width: 100%;
+        @include m.flexBox(row, space-between, center);
+
+        .balance-item {
+            flex: 1;
+            margin: 0 10px;
+            text-align: center;
+          }
+      }
 }
