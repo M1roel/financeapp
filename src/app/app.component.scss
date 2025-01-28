@@ -8,23 +8,26 @@
   background-color: v.$beige100;
 
   .sidenav {
-    width: 200px;
+    width: 300px;
     background-color: v.$grey900;
+    border-radius: 0 10px 10px 0;
     color: v.$beige100;
+    transition: width 0.3s;
 
     h2 {
-      @include m.styleFont("PS-Bold", 24px, 400, 1.2, v.$beige100);
+      @include m.styleFont("PS-Bold", 24px, 400, 1.2, white);
+      padding: 32px 40px;
     }
 
     .menu-items {
-      padding: 0;
-      margin-bottom: 10px;
+      padding-left: 0;
 
       li {
-        @include m.styleFont("PS-Regular", 16px, 400, 1.2, v.$beige100);
+        @include m.styleFont("PS-Regular", 16px, 400, 1.5, v.$grey300);
         list-style-type: none;
         cursor: pointer;
-        padding: 10px;
+        padding: 16px;
+        margin-right: 24px;
         border-radius: 0 5px 5px 0;
         transition: background-color 0.125s;
 
@@ -40,6 +43,11 @@
       position: fixed;
       bottom: 10px;
       left: 10px; 
+
+      &:hover {
+        background-color: v.$beige100;
+        color: v.$grey900;
+      }
     }
   }
 
@@ -52,6 +60,11 @@
       position: fixed;
       bottom: 10px;
       left: 10px;
+
+      &:hover {
+        background-color: v.$grey900;
+        color: v.$beige100;
+      }
     }
   }
 }
