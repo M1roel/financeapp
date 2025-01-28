@@ -1,3 +1,5 @@
+@use "../../src/mixins.scss" as m;
+
 .mat-drawer-container {
   width: 100vw;
   height: 100vh;
@@ -24,11 +26,16 @@
     }
   }
 
-  .example-sidenav-content {
-    display: flex;
+  .content {
+    @include m.flexBox(column, center, center);
     height: 100%;
-    align-items: center;
-    justify-content: center;
+    width: 100%;
+
+    button {
+      position: relative;
+      bottom: 10px;
+      left: 10px;
+    }
   }
 
   .router-container {
