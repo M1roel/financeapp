@@ -12,11 +12,16 @@
     background-color: v.$grey900;
     color: v.$beige100;
 
+    h2 {
+      @include m.styleFont("PS-Bold", 24px, 400, 1.2, v.$beige100);
+    }
+
     .menu-items {
       padding: 0;
       margin-bottom: 10px;
 
       li {
+        @include m.styleFont("PS-Regular", 16px, 400, 1.2, v.$beige100);
         list-style-type: none;
         cursor: pointer;
         padding: 10px;

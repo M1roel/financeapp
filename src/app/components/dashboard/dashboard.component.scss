@@ -2,7 +2,7 @@
 
 .overview-main {
 
-    h2{
-        @include m.styleFont();
+    h1{
+        @include m.styleFont("PS-Bold", 56px, 400, 1.2);
     }
 }

@@ -1,3 +1,5 @@
+@use "../src/variables.scss" as v;
+
 @mixin flexBox(
   $flexDirection: row,
   $justifyContent: center,
@@ -15,11 +17,11 @@
 }
 
 @mixin styleFont(
-  $fontFamily: "PS",
+  $fontFamily: "PS-Regular",
   $fontSize: 16px,
   $fontWeight: 400,
   $lineHeight: null,
-  $fontColor: #02F4BF
+  $fontColor: #201F24
 ) {
   font-family: $fontFamily;
   font-size: $fontSize;
