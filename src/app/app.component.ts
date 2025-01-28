@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet, RouterModule } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +11,9 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     CommonModule,
     RouterModule,
     RouterOutlet,
-    DashboardComponent,
     MatButtonModule,
-    MatSidenavModule,
-  ],
+    MatSidenavModule
+],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
 })

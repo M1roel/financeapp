@@ -1,12 +1,11 @@
 <mat-drawer-container class="mat-drawer-container" autosize>
   <mat-drawer #drawer class="sidenav" mode="side">
     <ul class="menu-items">
-      <li>
-        <a routerLink="/" routerLinkActive="active">Dashboard</a>
-      </li>
-      <li>
-        <a routerLink="/transactions" routerLinkActive="active">Transactions</a>
-      </li>
+      <li routerLink="/" routerLinkActive="active">Overview</li>
+      <li routerLink="/transactions" routerLinkActive="active">Transactions</li>      
+      <li routerLink="/budgets" routerLinkActive="active">Budgets</li>
+      <li routerLink="/pots" routerLinkActive="active">Pots</li>
+      <li routerLink="/bills" routerLinkActive="active">Bills</li>
     </ul>
   </mat-drawer>
 
