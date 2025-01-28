@@ -8,6 +8,6 @@ import { routes } from './app/app.routes';
 bootstrapApplication(AppComponent, {
   providers: [
     provideRouter(routes),
-    importProvidersFrom(BrowserAnimationsModule), // BrowserAnimationsModule wird hier hinzugefügt
+    importProvidersFrom(BrowserAnimationsModule),
   ],
 }).catch((err) => console.error(err));
