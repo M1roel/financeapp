@@ -1,0 +1,8 @@
+@use "../../../../src/mixins.scss" as m;
+
+.overview-main {
+
+    h2{
+        @include m.styleFont();
+    }
+}

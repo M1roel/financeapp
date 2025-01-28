@@ -3,17 +3,20 @@
     <h2>finance</h2>
     <ul class="menu-items">
       <li routerLink="/" routerLinkActive="active">Overview</li>
-      <li routerLink="/transactions" routerLinkActive="active">Transactions</li>      
+      <li routerLink="/transactions" routerLinkActive="active">Transactions</li>
       <li routerLink="/budgets" routerLinkActive="active">Budgets</li>
       <li routerLink="/pots" routerLinkActive="active">Pots</li>
       <li routerLink="/bills" routerLinkActive="active">Bills</li>
     </ul>
-  </mat-drawer>
-
-  <div class="content">
     <button type="button" mat-button (click)="drawer.toggle()">
       Toggle sidenav
     </button>
+  </mat-drawer>
+
+  <div class="content">
     <router-outlet></router-outlet>
+    <button type="button" mat-button (click)="drawer.toggle()">
+      Toggle sidenav
+    </button>
   </div>
 </mat-drawer-container>

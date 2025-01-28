@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'PS';
+    src: url("../src/assets/fonts/static/PublicSans-Regular.ttf") format('truetype');
+}
+
+@font-face {
+    font-family: 'PS-Bold';
+    src: url("../src/assets/fonts/static/PublicSans-Bold.ttf") format('truetype');
+}
+
 body, html {
     margin: 0;
     box-sizing: border-box;

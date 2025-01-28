@@ -29,23 +29,24 @@
         }
       }
     }
+
+    button {
+      color: v.$beige100;
+      position: fixed;
+      bottom: 10px;
+      left: 10px; 
+    }
   }
 
   .content {
-    @include m.flexBox(column, center, center);
+    @include m.flexBox(column, flex-start, flex-start);
     height: 100%;
     width: 100%;
 
     button {
-      position: relative;
+      position: fixed;
       bottom: 10px;
       left: 10px;
     }
-  }
-
-  .router-container {
-    padding-left: 56px;
-    padding-right: 56px;
-    padding-top: 16px;
   }
 }
