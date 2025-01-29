@@ -1,17 +1,26 @@
 {
-    "SIDENAV": {
-        "OVERVIEW": "Übersicht",
-        "TRANSACTIONS": "Transaktionen",
-        "POTS": "Sparziele",
-        "BILLS": "Ausgaben",
-        "TOGGLE_IN": "Seitenleiste einblenden",
-        "TOGGLE_OUT": "Seitenleiste ausblenden"
-    },
-    "DASHBOARD": {
-        "TITLE": "Übersicht",
-        "CURRENT_BALANCE": "Aktuelles Guthaben",
-        "INCOME": "Einnahmen",
-        "EXPENSES": "Ausgaben",
-        "SIGN": "€"
-    }
+  "SIDENAV": {
+    "OVERVIEW": "Übersicht",
+    "TRANSACTIONS": "Transaktionen",
+    "POTS": "Sparziele",
+    "BILLS": "Ausgaben",
+    "TOGGLE_IN": "Seitenleiste einblenden",
+    "TOGGLE_OUT": "Seitenleiste ausblenden"
+  },
+  "DASHBOARD": {
+    "TITLE": "Übersicht",
+    "CURRENT_BALANCE": "Aktuelles Guthaben",
+    "INCOME": "Einnahmen",
+    "EXPENSES": "Ausgaben",
+    "SIGN": "€"
+  },
+  "BILLS": {
+    "TITLE": "Ausgaben"
+  },
+  "POTS": {
+    "TITLE": "Sparziele"
+  },
+  "TRANSACTIONS": {
+    "TITLE": "Transaktionen"
+  }
 }

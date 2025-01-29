@@ -1,17 +1,26 @@
 {
-    "SIDENAV": {
-        "OVERVIEW": "Overview",
-        "TRANSACTIONS": "Transactions",
-        "POTS": "Pots",
-        "BILLS": "Bills",
-        "TOGGLE_IN": "Toggle sidenav",
-        "TOGGLE_OUT": "Toggle sidenav"
-    },
-    "DASHBOARD": {
-        "TITLE": "Overview",
-        "CURRENT_BALANCE": "Current Balance",
-        "INCOME": "Income",
-        "EXPENSES": "Expenses",
-        "SIGN": "$"
-    }
+  "SIDENAV": {
+    "OVERVIEW": "Overview",
+    "TRANSACTIONS": "Transactions",
+    "POTS": "Pots",
+    "BILLS": "Bills",
+    "TOGGLE_IN": "Toggle sidenav",
+    "TOGGLE_OUT": "Toggle sidenav"
+  },
+  "DASHBOARD": {
+    "TITLE": "Overview",
+    "CURRENT_BALANCE": "Current Balance",
+    "INCOME": "Income",
+    "EXPENSES": "Expenses",
+    "SIGN": "$"
+  },
+  "BILLS": {
+    "TITLE": "Bills"
+  },
+  "POTS": {
+    "TITLE": "Pots"
+  },
+  "TRANSACTIONS": {
+    "TITLE": "Transactions"
+  }
 }
