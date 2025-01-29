@@ -1,5 +1,10 @@
 {
     "SIDENAV": {
-        "OVERVIEW": "Übersicht"
+        "OVERVIEW": "Übersicht",
+        "TRANSACTIONS": "Transaktionen",
+        "POTS": "Sparziele",
+        "BILLS": "Ausgaben",
+        "TOGGLE_IN": "Seitenleiste einblenden",
+        "TOGGLE_OUT": "Seitenleiste ausblenden"
     }
 }

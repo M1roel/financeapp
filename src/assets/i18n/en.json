@@ -1,5 +1,10 @@
 {
     "SIDENAV": {
-        "OVERVIEW": "Overview"
+        "OVERVIEW": "Overview",
+        "TRANSACTIONS": "Transactions",
+        "POTS": "Pots",
+        "BILLS": "Bills",
+        "TOGGLE_IN": "Toggle sidenav",
+        "TOGGLE_OUT": "Toggle sidenav"
     }
 }
