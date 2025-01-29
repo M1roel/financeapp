@@ -18,6 +18,11 @@
       padding: 32px 40px;
     }
 
+    .lang-change {
+      @include m.flexBox(row, center, center);
+      cursor: pointer;
+    }
+
     .menu-items {
       padding-left: 0;
 
