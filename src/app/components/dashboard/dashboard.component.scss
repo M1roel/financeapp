@@ -1,22 +1,48 @@
 @use "../../../../src/mixins.scss" as m;
+@use "../../../../src/variables.scss" as v;
 
 .overview-main {
-    width: 100%;
-    box-sizing: border-box;
+  width: 100%;
+  box-sizing: border-box;
 
-    h1{
-        @include m.styleFont("PS-Bold", 32px, 400, 1.2);
-        margin: 0;
+  h1 {
+    @include m.styleFont("PS-Bold", 32px, 400, 1.2);
+    margin: 0;
+  }
+
+  .balance {
+    width: 100%;
+    @include m.flexBox(row, space-between, center);
+
+    .balance-item {
+    @include m.flexBox(column, center, flex-start);
+      width: 100%;
+      background-color: white;
+      flex: 1;
+      margin: 0 10px;
+      text-align: center;
+      padding: 24px;
+      border-radius: 12px;
+
+      .headline {
+        @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
+      }
+
+      .value {
+        @include m.styleFont("PS-Bold", 32px, 400, 1.2, v.$grey900);
+      }
     }
 
-    .balance {
-        width: 100%;
-        @include m.flexBox(row, space-between, center);
+    .balance-item:first-child {
+      background-color: black;
 
-        .balance-item {
-            flex: 1;
-            margin: 0 10px;
-            text-align: center;
-          }
+      .headline {
+        color: white;
       }
+
+      .value {
+        color: white;
+      }
+    }
+  }
 }
