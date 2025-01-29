@@ -11,6 +11,7 @@
         "TITLE": "Übersicht",
         "CURRENT_BALANCE": "Aktuelles Guthaben",
         "INCOME": "Einnahmen",
-        "EXPENSES": "Ausgaben"
+        "EXPENSES": "Ausgaben",
+        "SIGN": "€"
     }
 }

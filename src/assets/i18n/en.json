@@ -11,6 +11,7 @@
         "TITLE": "Overview",
         "CURRENT_BALANCE": "Current Balance",
         "INCOME": "Income",
-        "EXPENSES": "Expenses"
+        "EXPENSES": "Expenses",
+        "SIGN": "$"
     }
 }
