@@ -6,5 +6,11 @@
         "BILLS": "Bills",
         "TOGGLE_IN": "Toggle sidenav",
         "TOGGLE_OUT": "Toggle sidenav"
+    },
+    "DASHBOARD": {
+        "TITLE": "Overview",
+        "CURRENT_BALANCE": "Current Balance",
+        "INCOME": "Income",
+        "EXPENSES": "Expenses"
     }
 }

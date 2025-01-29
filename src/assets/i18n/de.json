@@ -6,5 +6,11 @@
         "BILLS": "Ausgaben",
         "TOGGLE_IN": "Seitenleiste einblenden",
         "TOGGLE_OUT": "Seitenleiste ausblenden"
+    },
+    "DASHBOARD": {
+        "TITLE": "Übersicht",
+        "CURRENT_BALANCE": "Aktuelles Guthaben",
+        "INCOME": "Einnahmen",
+        "EXPENSES": "Ausgaben"
     }
 }
