@@ -4,8 +4,8 @@
 .mat-drawer-container {
   width: 100vw;
   height: 100vh;
-  border: 1px solid rgba(0, 0, 0, 0.5);
   background-color: v.$beige100;
+  border: 1px solid rgba(0, 0, 0, 0.5);
 
   .sidenav {
     width: 300px;
@@ -30,10 +30,10 @@
 
       li {
         @include m.styleFont("PS-Regular", 16px, 400, 1.5, v.$grey300);
+        margin-right: 24px;
+        padding: 16px 40px 16px;
         list-style-type: none;
         cursor: pointer;
-        padding: 16px 40px 16px;
-        margin-right: 24px;
         border-radius: 0 5px 5px 0;
         transition: background-color 0.125s;
 
@@ -45,10 +45,10 @@
     }
 
     button {
-      color: v.$beige100;
       position: fixed;
       bottom: 10px;
-      left: 10px; 
+      left: 10px;
+      color: v.$beige100;
 
       &:hover {
         background-color: v.$beige100;
@@ -59,8 +59,8 @@
 
   .content {
     @include m.flexBox(column, flex-start, flex-start);
-    height: 100%;
     width: 100%;
+    height: 100%;
     padding: 32px 40px;
     box-sizing: border-box;
 
