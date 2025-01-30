@@ -48,3 +48,7 @@ Thumbs.db
 .preview.jpg
 .README.md
 .preview.jpg
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

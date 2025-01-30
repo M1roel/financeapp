@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "financeapp-ae3f4": {
+      "hosting": {
+        "financeapp": [
+          "financeapp-ae3f4"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "financeapp-ae3f4"
+  }
+}
