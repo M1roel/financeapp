@@ -19,7 +19,8 @@
     }
 
     .lang-change {
-      @include m.flexBox(row, center, center);
+      @include m.flexBox(row, flex-start, center);
+      margin-left: 10px;
       cursor: pointer;
     }
 
