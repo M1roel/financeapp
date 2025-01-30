@@ -2,6 +2,8 @@
 @use "../../../../src/variables.scss" as v;
 
 .overview-main {
+  min-height: 500px;
+  height: auto;
   width: 100%;
   box-sizing: border-box;
 
@@ -18,7 +20,8 @@
 
     .balance-item {
       @include m.flexBox(column, center, flex-start);
-      width: 100%;
+      flex-grow: 1;
+      min-width: 100px;
       background-color: white;
       flex: 1;
       margin: 0 10px;
@@ -50,8 +53,7 @@
   }
 
   .finance-overview {
-    width: 100%;
-    height: 100%;
+    height: 50vh;
     margin-top: 24px;
 
     @include m.flexBox(row, center, flex-start);
@@ -67,9 +69,12 @@
 
     .finance-left {
       width: 60%;
+      display: flex;
+      flex-direction: column;
 
       .pots-section {
-        height: 25%;
+        flex: 1;
+        min-height: 150px;
         background-color: white;
         padding: 32px;
         border-radius: 12px;
@@ -80,7 +85,8 @@
       }
 
       .transactions-section {
-        height: 75%;
+        flex: 2;
+        min-height: 320px;
         background-color: white;
         margin-top: 24px;
         padding: 32px;
@@ -95,9 +101,12 @@
     .finance-right {
       width: 40%;
       margin-left: 24px;
+      display: flex;
+      flex-direction: column;
 
       .budgets-section {
-        height: 60%;
+        flex: 2;
+        min-height: 300px;
         background-color: white;
         padding: 32px;
         border-radius: 12px;
@@ -108,7 +117,8 @@
       }
 
       .bills-section {
-        height: 40%;
+        flex: 1;
+        min-height: 180px;
         background-color: white;
         margin-top: 24px;
         padding: 32px;
