@@ -2,32 +2,34 @@
 @use "../../../../src/variables.scss" as v;
 
 .overview-main {
-  min-height: 500px;
-  height: auto;
+  @include m.flexBox(row, space-between, center);
   width: 100%;
-  box-sizing: border-box;
+  height: 100%;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 
   h1 {
     @include m.styleFont("PS-Bold", 32px, 400, 1.2);
-    padding: 20px 0;
     margin: 0;
     margin-bottom: 20px;
+    padding: 20px 0;
   }
 
   .balance {
-    width: 100%;
     @include m.flexBox(row, space-between, center);
+    width: 100%;
 
     .balance-item {
       @include m.flexBox(column, center, flex-start);
+      flex: 1;
       flex-grow: 1;
       min-width: 100px;
-      background-color: white;
-      flex: 1;
       margin: 0 10px;
-      text-align: center;
       padding: 24px;
+      background-color: white;
       border-radius: 12px;
+      text-align: center;
 
       .balance-headline {
         @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
@@ -53,10 +55,12 @@
   }
 
   .finance-overview {
-    height: 50vh;
-    margin-top: 24px;
-
     @include m.flexBox(row, center, flex-start);
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    min-height: 0;
+    margin-top: 24px;
 
     h2 {
       @include m.styleFont("PS-Regular", 20px, 400, 1.2, v.$grey900);
@@ -69,14 +73,17 @@
 
     .finance-left {
       width: 60%;
+      height: 100%;
+      flex-grow: 1;
+      min-height: 0;
       display: flex;
       flex-direction: column;
 
       .pots-section {
         flex: 1;
-        min-height: 150px;
-        background-color: white;
+        min-height: 100px;
         padding: 32px;
+        background-color: white;
         border-radius: 12px;
 
         .pots-summary {
@@ -86,10 +93,11 @@
 
       .transactions-section {
         flex: 2;
-        min-height: 320px;
-        background-color: white;
+        flex-grow: 1;
+        min-height: 0;
         margin-top: 24px;
         padding: 32px;
+        background-color: white;
         border-radius: 12px;
 
         .transactions-overview {
@@ -100,15 +108,18 @@
 
     .finance-right {
       width: 40%;
+      height: 100%;
+      flex-grow: 1;
+      min-height: 0;
       margin-left: 24px;
       display: flex;
       flex-direction: column;
 
       .budgets-section {
         flex: 2;
-        min-height: 300px;
-        background-color: white;
+        min-height: 220px;
         padding: 32px;
+        background-color: white;
         border-radius: 12px;
 
         .budgets-overview {
@@ -118,10 +129,11 @@
 
       .bills-section {
         flex: 1;
-        min-height: 180px;
-        background-color: white;
+        flex-grow: 1;
+        min-height: 0;
         margin-top: 24px;
         padding: 32px;
+        background-color: white;
         border-radius: 12px;
 
         .bills-overview {
