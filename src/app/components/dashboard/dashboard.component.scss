@@ -14,21 +14,26 @@
     margin: 0;
     margin-bottom: 20px;
     padding: 20px 0;
+    padding: 20px 0;
   }
 
   .balance {
     @include m.flexBox(row, space-between, center);
     width: 100%;
+    width: 100%;
 
     .balance-item {
       @include m.flexBox(column, center, flex-start);
+      flex: 1;
       flex: 1;
       flex-grow: 1;
       min-width: 100px;
       margin: 0 10px;
       padding: 24px;
       background-color: white;
+      background-color: white;
       border-radius: 12px;
+      text-align: center;
       text-align: center;
 
       .balance-headline {
