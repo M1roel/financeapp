@@ -8,22 +8,13 @@ import { MatTableModule } from '@angular/material/table';
 
 export interface PeriodicElement {
   category: string;
-  sender: number;
-  date: number;
-  amount: string;
+  sender: string;
+  date: string;
+  amount: number;
 }
 
 const ELEMENT_DATA: PeriodicElement[] = [
-  {sender: 1, category: 'Hydrogen', date: 1.0079, amount: 'H'},
-  {sender: 2, category: 'Helium', date: 4.0026, amount: 'He'},
-  {sender: 3, category: 'Lithium', date: 6.941, amount: 'Li'},
-  {sender: 4, category: 'Beryllium', date: 9.0122, amount: 'Be'},
-  {sender: 5, category: 'Boron', date: 10.811, amount: 'B'},
-  {sender: 6, category: 'Carbon', date: 12.0107, amount: 'C'},
-  {sender: 7, category: 'Nitrogen', date: 14.0067, amount: 'N'},
-  {sender: 8, category: 'Oxygen', date: 15.9994, amount: 'O'},
-  {sender: 9, category: 'Fluorine', date: 18.9984, amount: 'F'},
-  {sender: 10, category: 'Neon', date: 20.1797, amount: 'Ne'},
+  {sender: 'Peter Pfautsch', category: 'Bill', date: '12 Aug 2025', amount: 12.00}
 ];
 
 @Component({
