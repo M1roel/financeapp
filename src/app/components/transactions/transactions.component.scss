@@ -1,9 +1,58 @@
 @use "../../../../src/mixins.scss" as m;
 
 .transactions-main {
+  h1 {
+    @include m.styleFont("PS-Bold", 32px, 400, 1.2);
+    margin: 0;
+  }
 
-    h1{
-        @include m.styleFont("PS-Bold", 32px, 400, 1.2);
-        margin: 0;
+  .transaction-list {
+    background-color: white;
+    border-radius: 12px;
+    height: 100%;
+    padding: 32px;
+
+    @media (max-width: 768px) {
+      padding: 16px;
     }
+
+    .transaction-list-search {
+        @include m.flexBox(row, space-between, center);
+
+        @media (max-width: 768px) {
+          @include m.flexBox(column, flex-start, flex-start);
+        }
+
+      input {
+        width: 320px;
+        height: 45px;
+        border-radius: 8px;
+      }
+
+      .transaction-list-search-dropdown {
+        @include m.flexBox(row, flex-end, center);
+        width: 100%;
+
+        @media (max-width: 768px) {
+            @include m.flexBox(column, center, center);
+
+            mat-form-field {
+              width: 100%;
+            }
+          }
+
+        .sort-by {
+          width: 114px;
+          height: 45px;
+          border-radius: 8px;
+        }  
+        
+        .category {
+          width: 171px;
+          height: 45px;
+          border-radius: 8px;
+        }
+      }
+    }
+  }
 }
