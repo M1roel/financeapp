@@ -30,6 +30,9 @@
     "A_TO_Z": "A bis Z",
     "Z_TO_A": "Z bis A",
     "HIGHEST": "Höchste",
-    "LOWEST": "Niedrigste"
+    "LOWEST": "Niedrigste",
+    "SENDER": "Empfänger / Sender",
+    "DATE": "Transaktionsdatum",
+    "AMOUNT": "Betrag"
   }
 }

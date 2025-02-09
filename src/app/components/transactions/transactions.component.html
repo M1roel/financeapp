@@ -12,12 +12,24 @@
         <mat-form-field>
           <span>{{ "TRANSACTIONS.SORT" | translate }}</span>
           <mat-select matNativeControl required class="sort-by">
-            <mat-option value="latest">{{ "TRANSACTIONS.LATEST" | translate }}</mat-option>
-            <mat-option value="oldest">{{ "TRANSACTIONS.OLDEST" | translate }}</mat-option>
-            <mat-option value="a-to-z">{{ "TRANSACTIONS.A_TO_Z" | translate }}</mat-option>
-            <mat-option value="z-to-a">{{ "TRANSACTIONS.Z_TO_A" | translate }}</mat-option>
-            <mat-option value="highest">{{ "TRANSACTIONS.HIGHEST" | translate }}</mat-option>
-            <mat-option value="Lowest">{{ "TRANSACTIONS.LOWEST" | translate }}</mat-option>
+            <mat-option value="latest">{{
+              "TRANSACTIONS.LATEST" | translate
+            }}</mat-option>
+            <mat-option value="oldest">{{
+              "TRANSACTIONS.OLDEST" | translate
+            }}</mat-option>
+            <mat-option value="a-to-z">{{
+              "TRANSACTIONS.A_TO_Z" | translate
+            }}</mat-option>
+            <mat-option value="z-to-a">{{
+              "TRANSACTIONS.Z_TO_A" | translate
+            }}</mat-option>
+            <mat-option value="highest">{{
+              "TRANSACTIONS.HIGHEST" | translate
+            }}</mat-option>
+            <mat-option value="Lowest">{{
+              "TRANSACTIONS.LOWEST" | translate
+            }}</mat-option>
           </mat-select>
         </mat-form-field>
         <mat-form-field>
@@ -29,5 +41,38 @@
         </mat-form-field>
       </div>
     </div>
+
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="sender">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "TRANSACTIONS.SENDER" | translate }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.sender }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="category">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "TRANSACTIONS.CATEGORY" | translate }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.category }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="date">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "TRANSACTIONS.DATE" | translate }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.date }}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>
+          {{ "TRANSACTIONS.AMOUNT" | translate }}
+        </th>
+        <td mat-cell *matCellDef="let element">{{ element.amount }}</td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
   </section>
 </section>

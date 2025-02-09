@@ -18,23 +18,23 @@
     }
 
     .transaction-list-search {
-        @include m.flexBox(row, space-between, center);
+      @include m.flexBox(row, space-between, center);
+
+      @media (max-width: 768px) {
+        @include m.flexBox(column, flex-start, flex-start);
+      }
+
+      .transaction-list-search-right {
+        @include m.flexBox(row, flex-end, center);
+
+        mat-form-field {
+          margin-left: 16px;
+        }
 
         @media (max-width: 768px) {
           @include m.flexBox(column, flex-start, flex-start);
         }
-
-        .transaction-list-search-right {
-            @include m.flexBox(row, flex-end, center);
-
-            mat-form-field {
-                margin-left: 16px;
-            }
-
-            @media (max-width: 768px) {
-                @include m.flexBox(column, flex-start, flex-start);
-              }
-        }
+      }
     }
   }
 }
