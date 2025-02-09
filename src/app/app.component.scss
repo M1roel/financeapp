@@ -42,6 +42,10 @@
           color: v.$grey900;
         }
       }
+
+      .menu-items-home {
+        @include m.flexBox(row, flex-start, center);
+      }
     }
 
     button {
