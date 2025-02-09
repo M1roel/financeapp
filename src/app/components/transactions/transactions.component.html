@@ -2,21 +2,26 @@
   <h1>{{ "TRANSACTIONS.TITLE" | translate }}</h1>
   <section class="transaction-list">
     <div class="transaction-list-search">
-      <input type="text" placeholder="Search transactions" />
-      <div class="transaction-list-search-dropdown">
+      <div class="transaction-list-search-left">
         <mat-form-field>
-          <span>Sort by</span>
+          <mat-label>{{ "TRANSACTIONS.SEARCH" | translate }}</mat-label>
+          <input matInput />
+        </mat-form-field>
+      </div>
+      <div class="transaction-list-search-right">
+        <mat-form-field>
+          <span>{{ "TRANSACTIONS.SORT" | translate }}</span>
           <select matNativeControl required class="sort-by">
-            <option value="latest">Latest</option>
-            <option value="oldest">Oldest</option>
-            <option value="a-to-z">A to Z</option>
-            <option value="z-to-a">Z to A</option>
-            <option value="highest">Highest</option>
-            <option value="Lowest">Lowest</option>
+            <option value="latest">{{ "TRANSACTIONS.LATEST" | translate }}</option>
+            <option value="oldest">{{ "TRANSACTIONS.OLDEST" | translate }}</option>
+            <option value="a-to-z">{{ "TRANSACTIONS.A_TO_Z" | translate }}</option>
+            <option value="z-to-a">{{ "TRANSACTIONS.Z_TO_A" | translate }}</option>
+            <option value="highest">{{ "TRANSACTIONS.HIGHEST" | translate }}</option>
+            <option value="Lowest">{{ "TRANSACTIONS.LOWEST" | translate }}</option>
           </select>
         </mat-form-field>
         <mat-form-field>
-          <span>Category</span>
+          <span>{{ "TRANSACTIONS.CATEGORY" | translate }}</span>
           <select matNativeControl required class="category">
             <option value="all-transactions">All Transactions</option>
             <option value="bills">Bills</option>

@@ -21,6 +21,15 @@
     "TITLE": "Sparziele"
   },
   "TRANSACTIONS": {
-    "TITLE": "Transaktionen"
+    "TITLE": "Transaktionen",
+    "SEARCH": "Suche Transaktion",
+    "SORT": "Sortieren nach",
+    "CATEGORY": "Kategorie",
+    "LATEST": "Neueste",
+    "OLDEST": "Älteste",
+    "A_TO_Z": "A bis Z",
+    "Z_TO_A": "Z bis A",
+    "HIGHEST": "Höchste",
+    "LOWEST": "Niedrigste"
   }
 }

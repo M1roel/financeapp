@@ -23,36 +23,13 @@
           @include m.flexBox(column, flex-start, flex-start);
         }
 
-      input {
-        width: 320px;
-        height: 45px;
-        border-radius: 8px;
-      }
+        .transaction-list-search-right {
+            @include m.flexBox(row, flex-end, center);
 
-      .transaction-list-search-dropdown {
-        @include m.flexBox(row, flex-end, center);
-        width: 100%;
-
-        @media (max-width: 768px) {
-            @include m.flexBox(column, center, center);
-
-            mat-form-field {
-              width: 100%;
-            }
-          }
-
-        .sort-by {
-          width: 114px;
-          height: 45px;
-          border-radius: 8px;
-        }  
-        
-        .category {
-          width: 171px;
-          height: 45px;
-          border-radius: 8px;
+            @media (max-width: 768px) {
+                @include m.flexBox(column, flex-start, flex-start);
+              }
         }
-      }
     }
   }
 }
