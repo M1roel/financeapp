@@ -5,15 +5,15 @@
       <h2 class="balance-headline">
         {{ "DASHBOARD.CURRENT_BALANCE" | translate }}
       </h2>
-      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}10</div>
+      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}{{ bilance.currentBalance }}</div>
     </article>
     <article class="balance-item">
       <h2 class="balance-headline">{{ "DASHBOARD.INCOME" | translate }}</h2>
-      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}10</div>
+      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}{{ bilance.income }}</div>
     </article>
     <article class="balance-item">
       <h2 class="balance-headline">{{ "DASHBOARD.EXPENSES" | translate }}</h2>
-      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}10</div>
+      <div class="balance-value">{{ "DASHBOARD.SIGN" | translate }}{{ bilance.expenses }}</div>
     </article>
   </section>
 
