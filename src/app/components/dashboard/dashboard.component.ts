@@ -1,6 +1,4 @@
-import { CommonModule } from '@angular/common';
 import { Component, OnInit, Inject } from '@angular/core';
-import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Bilance } from '../../models/bilance.class';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
@@ -14,11 +12,9 @@ import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 })
 export class DashboardComponent implements OnInit {
   bilance = new Bilance();
-  allBilance: any[] = [];
 
   constructor(
-    @Inject(Firestore) private firestore: Firestore,
-    private translate: TranslateService
+    @Inject(Firestore) private firestore: Firestore
   ) {}
 
   ngOnInit(): void {
@@ -27,11 +23,9 @@ export class DashboardComponent implements OnInit {
     collectionData(bilanceCollection, { idField: 'id' }).subscribe(
       (changes: any) => {
         console.log(changes);
-        this.allBilance = changes;
 
-        // Assuming the first document contains the current balance
-        if (this.allBilance.length > 0) {
-          Object.assign(this.bilance, this.allBilance[0]);
+        if (changes.length > 0) {
+          Object.assign(this.bilance, changes[0]);
         }
       }
     );
