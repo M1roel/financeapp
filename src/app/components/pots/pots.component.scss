@@ -2,6 +2,7 @@
 @use "../../../../src/variables.scss" as v;
 
 .pots-main {
+    height: 100%;
   .pots-headline {
     @include m.flexBox(row, space-between, center);
 
@@ -19,5 +20,11 @@
         border: none;
         cursor: pointer;
     }
+  }
+
+  .pots-list {
+    margin-top: 32px;
+    height: auto;
+    width: 100%;
   }
 }
