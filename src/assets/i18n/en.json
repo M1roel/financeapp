@@ -24,7 +24,8 @@
       "TITLE": "Add New Pot",
       "DESCRIPTION": "Create a pot to set savings targets. These can help keep you on track as you save for special purchases.",
       "NAME": "Pot Name",
-      "TARGET": "Target"
+      "TARGET": "Target",
+      "THEME": "Theme"
     }
   },
   "TRANSACTIONS": {

@@ -6,11 +6,19 @@
         <p>{{ "POTS.ADD_POT.DESCRIPTION" | translate }}</p>
     </div>
     <div class="pot-main-name">
-        <span>{{ 'POTS.ADD_POT.NAME' | translate }}</span>
+        <label for="name">{{ "POTS.ADD_POT.NAME" | translate }}</label>
         <input type="text" placeholder=""/>
     </div>
     <div class="pot-main-target">
-        <span>{{ "POTS.ADD_POT.TARGET" | translate }}</span>
+        <label for="target">{{ "POTS.ADD_POT.TARGET" | translate }}</label>
         <input type="number" placeholder=""/>
+    </div>
+    <div class="pot-main-theme">
+    <label for="theme">{{ "POTS.ADD_POT.THEME" | translate }}</label>
+    <select id="theme">
+        <option value="theme1">{{ "POTS.ADD_POT.THEME1" | translate }}</option>
+        <option value="theme2">{{ "POTS.ADD_POT.THEME2" | translate }}</option>
+        <option value="theme3">{{ "POTS.ADD_POT.THEME3" | translate }}</option>
+    </select>
     </div>
 </section>
