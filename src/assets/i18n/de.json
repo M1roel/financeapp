@@ -25,7 +25,8 @@
       "DESCRIPTION": "Erstellen Sie ein Sparziel, um Sparziele festzulegen. Diese können Ihnen helfen, auf Kurs zu bleiben, während Sie für besondere Einkäufe sparen.",
       "NAME": "Sparziel Bezeichnung",
       "TARGET": "Zielbetrag",
-      "THEME": "Thema"
+      "THEME": "Thema",
+      "ADD": "Sparziel hinzufügen"
     }
   },
   "TRANSACTIONS": {

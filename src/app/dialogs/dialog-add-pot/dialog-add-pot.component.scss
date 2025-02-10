@@ -1,0 +1,62 @@
+@use '../../../mixins.scss' as m;
+@use '../../../variables.scss' as v;
+
+.pot-main {
+    @include m.flexBox(column, center, flex-start);
+    height: 100%;
+    width: auto;
+    padding: 32px;
+
+    .pot-main-headline {
+        @include m.flexBox(row, space-between, center);
+        width: 100%;
+
+        h2 {
+            @include m.styleFont('PS-Regular', 32px, 900, 1.2, v.$grey900) 
+        }
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .pot-main-description {
+        @include m.styleFont('PS-Regular', 14px, 400, 1.5, v.$grey500);
+    }
+
+    .pot-main-name,
+    .pot-main-target,
+    .pot-main-theme {
+        @include m.flexBox(column, center, flex-start);
+        width: 100%;
+        padding-bottom: 16px;
+
+        input {
+            width: 100%;
+            height: 45px;
+            border-radius: 8px;
+            border: 2px, solid, v.$grey300;
+        }
+
+        label   {
+            @include m.styleFont('PS-Bold', 12px, 400, 1.5, v.$grey500);
+        }
+    }
+
+    button {
+        @include m.styleFont('PS-Bold', 14px, 400, 1.5, v.$grey900);
+        width: 100%;
+        height: 53px;
+        background-color: v.$grey900;
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: v.$grey500;
+        }
+    }
+}
