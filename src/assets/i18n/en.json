@@ -18,7 +18,8 @@
     "TITLE": "Bills"
   },
   "POTS": {
-    "TITLE": "Pots"
+    "TITLE": "Pots",
+    "ADD": "+ Add New Pot"
   },
   "TRANSACTIONS": {
     "TITLE": "Transactions",

@@ -1,9 +1,23 @@
 @use "../../../../src/mixins.scss" as m;
+@use "../../../../src/variables.scss" as v;
 
 .pots-main {
+  .pots-headline {
+    @include m.flexBox(row, space-between, center);
 
-    h1{
-        @include m.styleFont("PS-Bold", 32px, 400, 1.2);
-        margin: 0;
+    h1 {
+      @include m.styleFont("PS-Bold", 32px, 400, 1.2);
+      margin: 0;
     }
+
+    button {
+        @include m.styleFont("PS-Bold", 14px, 400, 1.5, white);
+        width: 128px;
+        height: 53px;
+        background-color: v.$grey900;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+    }
+  }
 }

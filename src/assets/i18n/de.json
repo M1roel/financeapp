@@ -18,7 +18,8 @@
     "TITLE": "Ausgaben"
   },
   "POTS": {
-    "TITLE": "Sparziele"
+    "TITLE": "Sparziele",
+    "ADD": "+ Neues Sparziel"
   },
   "TRANSACTIONS": {
     "TITLE": "Transaktionen",
