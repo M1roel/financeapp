@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
@@ -9,5 +10,11 @@ import { TranslateModule } from '@ngx-translate/core';
   styleUrl: './dialog-add-pot.component.scss'
 })
 export class DialogAddPotComponent {
+
+  constructor(private dialogRef: MatDialogRef<DialogAddPotComponent>) { }
+
+  closeDialog() {
+    this.dialogRef.close();
+  }
 
 }

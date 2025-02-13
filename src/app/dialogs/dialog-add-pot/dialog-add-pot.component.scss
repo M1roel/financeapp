@@ -5,6 +5,7 @@
     @include m.flexBox(column, center, flex-start);
     height: 100%;
     width: auto;
+    max-width: 512px;
     padding: 32px;
 
     .pot-main-headline {
