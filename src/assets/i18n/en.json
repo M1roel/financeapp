@@ -26,7 +26,21 @@
       "NAME": "Pot Name",
       "TARGET": "Target",
       "THEME": "Theme",
-      "ADD": "Add Pot"
+      "ADD": "Add Pot",
+      "THEME_COLOR": {
+        "BLUE": "Blue",
+        "GREEN": "Green",
+        "ORANGE": "Orange",
+        "PINK": "Pink",
+        "PURPLE": "Purple",
+        "RED": "Red",
+        "YELLOW": "Yellow",
+        "CYAN": "Cyan",
+        "NAVY": "Navy",
+        "TORQUOISE": "Torquoise",
+        "BROWN": "Brown",
+        "MAGENTA": "Magenta"
+      }
     }
   },
   "TRANSACTIONS": {

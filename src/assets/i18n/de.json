@@ -26,7 +26,21 @@
       "NAME": "Sparziel Bezeichnung",
       "TARGET": "Zielbetrag",
       "THEME": "Thema",
-      "ADD": "Sparziel hinzufügen"
+      "ADD": "Sparziel hinzufügen",
+      "THEME_COLOR": {
+        "BLUE": "Blau",
+        "GREEN": "Grün",
+        "ORANGE": "Orange",
+        "PINK": "Pink",
+        "PURPLE": "Lila",
+        "RED": "Rot",
+        "YELLOW": "Gelb",
+        "CYAN": "Cyan",
+        "NAVY": "Marineblau",
+        "TORQUOISE": "Türkis",
+        "BROWN": "Braun",
+        "MAGENTA": "Magenta"
+      }
     }
   },
   "TRANSACTIONS": {
