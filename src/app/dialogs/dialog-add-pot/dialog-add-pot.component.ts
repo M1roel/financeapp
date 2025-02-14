@@ -17,4 +17,7 @@ export class DialogAddPotComponent {
     this.dialogRef.close();
   }
 
+  addPot(){
+    // Add pot logic here
+  } 
 }
