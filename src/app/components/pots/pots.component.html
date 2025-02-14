@@ -5,6 +5,11 @@
   </div>
 
   <article class="pots-list">
-
+    <div *ngFor="let pot of allPots" class="pot-item">
+      <div>{{pot.name}}</div>
+      <div>{{pot.target}}</div>
+      <div>{{pot.total_saved}}</div>
+      <div>{{pot.theme_color}}</div>
+    </div>
   </article>
 </section>

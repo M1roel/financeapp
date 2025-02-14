@@ -5,18 +5,20 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogAddPotComponent } from '../../dialogs/dialog-add-pot/dialog-add-pot.component';
 import { Pot } from '../../models/pot.class';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
   selector: 'app-pots',
   standalone: true,
-  imports: [TranslateModule, MatDialogModule],
+  imports: [TranslateModule, MatDialogModule, CommonModule],
   templateUrl: './pots.component.html',
   styleUrl: './pots.component.scss'
 })
 export class PotsComponent implements OnInit {
 
   pot = new Pot();
+  allPots: any[] = [];
 
   constructor(private translate: TranslateService, public dialog: MatDialog, @Inject(Firestore) private firestore: Firestore) {}
   
@@ -27,6 +29,7 @@ export class PotsComponent implements OnInit {
     collectionData(potCollection, { idField: 'id' }).subscribe(
       (changes: any) => {
         console.log(changes);
+        this.allPots = changes;
 
         if (changes.length > 0) {
           Object.assign(this.pot, changes[0]);
