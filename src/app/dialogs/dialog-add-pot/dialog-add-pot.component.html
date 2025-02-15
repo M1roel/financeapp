@@ -17,17 +17,11 @@
     <div class="pot-main-theme">
     <label for="theme">{{ "POTS.ADD_POT.THEME" | translate }}</label>
     <select id="theme" [(ngModel)]="pot.theme_color">
-        <option value="theme01">{{ "POTS.ADD_POT.THEME_COLOR.GREEN" | translate }}</option>
-        <option value="theme02">{{ "POTS.ADD_POT.THEME_COLOR.YELLOW" | translate }}</option>
-        <option value="theme03">{{ "POTS.ADD_POT.THEME_COLOR.CYAN" | translate }}</option>
-        <option value="theme04">{{ "POTS.ADD_POT.THEME_COLOR.NAVY" | translate }}</option>
-        <option value="theme05">{{ "POTS.ADD_POT.THEME_COLOR.RED" | translate }}</option>
-        <option value="theme06">{{ "POTS.ADD_POT.THEME_COLOR.PURPLE" | translate }}</option>
-        <option value="theme07">{{ "POTS.ADD_POT.THEME_COLOR.TORQUOISE" | translate }}</option>
-        <option value="theme08">{{ "POTS.ADD_POT.THEME_COLOR.BROWN" | translate }}</option>
-        <option value="theme09">{{ "POTS.ADD_POT.THEME_COLOR.MAGENTA" | translate }}</option>
-        <option value="theme10">{{ "POTS.ADD_POT.THEME_COLOR.BLUE" | translate }}</option>
+        <option *ngFor="let color of colorOptions" [value]="color.value">
+            {{ color.labelKey | translate }}
+        </option>
     </select>
+    
     </div>
     <button class="pot-main-add" (click)="addPot()">{{ "POTS.ADD_POT.ADD" | translate }}</button>
 </section>

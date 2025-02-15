@@ -8,7 +8,7 @@
     <div *ngFor="let pot of allPots" class="pot-item">
       <div class="pot-head">
         <div class="pot-head-left">
-          <div class="pot-color"></div>
+          <div class="pot-color" [ngStyle]="{ 'background-color': pot.theme_color }"></div> 
           <div class="pot-name">{{ pot.name }}</div>
         </div>
         <div class="pot-head-menu">
