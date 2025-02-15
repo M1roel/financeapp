@@ -8,15 +8,15 @@
     </div>
     <div class="pot-main-name">
         <label for="name">{{ "POTS.ADD_POT.NAME" | translate }}</label>
-        <input type="text" placeholder=""/>
+        <input type="text" id="name" [(ngModel)]="pot.name" placeholder=""/>
     </div>
     <div class="pot-main-target">
         <label for="target">{{ "POTS.ADD_POT.TARGET" | translate }}</label>
-        <input type="number" placeholder=""/>
+        <input type="number" id="target" [(ngModel)]="pot.target" placeholder=""/>
     </div>
     <div class="pot-main-theme">
     <label for="theme">{{ "POTS.ADD_POT.THEME" | translate }}</label>
-    <select id="theme">
+    <select id="theme" [(ngModel)]="pot.theme_color">
         <option value="theme01">{{ "POTS.ADD_POT.THEME_COLOR.GREEN" | translate }}</option>
         <option value="theme02">{{ "POTS.ADD_POT.THEME_COLOR.YELLOW" | translate }}</option>
         <option value="theme03">{{ "POTS.ADD_POT.THEME_COLOR.CYAN" | translate }}</option>

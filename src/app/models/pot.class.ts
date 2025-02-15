@@ -6,8 +6,8 @@ export class Pot {
 
     constructor(obj?: any) {
         this.name = obj ? obj.name : '';
-        this.total_saved = obj ? obj.total_saved : '';
-        this.target = obj ? obj.target : '';
+        this.total_saved = obj ? obj.total_saved : 0;
+        this.target = obj ? obj.target : 0;
         this.theme_color = obj ? obj.theme_color : '';
     }
 
