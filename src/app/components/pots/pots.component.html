@@ -6,10 +6,23 @@
 
   <article class="pots-list">
     <div *ngFor="let pot of allPots" class="pot-item">
-      <div>{{pot.name}}</div>
-      <div>{{pot.target}}</div>
-      <div>{{pot.total_saved}}</div>
-      <div>{{pot.theme_color}}</div>
+      <div class="pot-head">
+        <div class="pot-head-left">
+          <div class="pot-color"></div>
+          <div class="pot-name">{{ pot.name }}</div>
+        </div>
+        <div class="pot-head-menu">
+          <img src="../../../assets/images/close_btn.png" alt="burger menu">
+        </div>
+      </div>
+      <div class="pot-mid">
+        <div>{{ pot.total_saved }}</div>
+        <div>{{ pot.target }}</div>
+      </div>
+      <div class="pot-btn">
+        <button>{{ "POTS.ADD_MONEY" | translate }}</button>
+        <button>{{ "POTS.WITHDRAW" | translate }}</button>
+      </div>
     </div>
   </article>
 </section>
