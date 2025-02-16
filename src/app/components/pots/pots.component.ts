@@ -7,6 +7,8 @@ import { Pot } from '../../models/pot.class';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatIconModule } from '@angular/material/icon';
 
 @Component({
   selector: 'app-pots',
@@ -16,6 +18,8 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
     MatDialogModule,
     CommonModule,
     MatProgressBarModule,
+    MatMenuModule,
+    MatIconModule,
   ],
   templateUrl: './pots.component.html',
   styleUrl: './pots.component.scss',

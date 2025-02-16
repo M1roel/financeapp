@@ -34,7 +34,8 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      width: 518px;
+      flex: 1 1 33%;
+      max-width: 518px;
       min-width: 320px;
       height: 303px;
       background-color: white;
@@ -58,6 +59,13 @@
           .pot-name {
             @include m.styleFont("PS-Bold", 20px, 400, 1.2, v.$grey900);
           }
+        }
+
+        button[mat-icon-button] {
+          background-color: transparent;
+          box-shadow: none;
+          border: none;
+          cursor: pointer;
         }
       }
 
@@ -97,6 +105,10 @@
           border-radius: 8px;
           border: none;
           cursor: pointer;
+
+          &:first-child {
+            margin-right: 16px;
+          }
         }
       }
     }

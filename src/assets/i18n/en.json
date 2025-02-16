@@ -21,6 +21,8 @@
     "TITLE": "Pots",
     "ADD": "+ Add New Pot",
     "ADD_MONEY": "+ Add Money",
+    "EDIT": "Edit Pot",
+    "DELETE": "Delete Pot",
     "WITHDRAW": "Withdraw",
     "TOTAL": "Total Saved",
     "ADD_POT": {

@@ -14,9 +14,18 @@
           ></div>
           <div class="pot-name">{{ pot.name }}</div>
         </div>
-        <div class="pot-head-menu">
-          <img src="../../../assets/images/close_btn.png" alt="burger menu" />
-        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu">
+          <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>
+            <span>{{ "POTS.EDIT" | translate }}</span>
+          </button>
+          <button mat-menu-item>
+            <span>{{ "POTS.DELETE" | translate }}</span>
+          </button>
+        </mat-menu>
+        
       </div>
       <div class="pot-mid">
         <div class="pot-mid-total">

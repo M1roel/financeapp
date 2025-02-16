@@ -21,6 +21,8 @@
     "TITLE": "Sparziele",
     "ADD": "+ Neues Sparziel",
     "ADD_MONEY": "+ Geld hinzufügen",
+    "EDIT": "Sparziel bearbeiten",
+    "DELETE": "Sparziel löschen",
     "WITHDRAW": "Abheben",
     "TOTAL": "Gespart",
     "ADD_POT": {
