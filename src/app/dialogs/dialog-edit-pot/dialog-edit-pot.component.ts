@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogRef, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Pot } from '../../models/pot.class';
-import { Firestore, addDoc, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, updateDoc, collection, collectionData, doc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -29,12 +29,13 @@ export class DialogEditPotComponent {
     { value: 'blue', labelKey: 'POTS.ADD_POT.THEME_COLOR.BLUE' },
   ];
 
-  pot = Pot;
-  allPots: any;
+  pot = new Pot();  
+  allPots: any[] = [];
 
   constructor(
     private dialogRef: MatDialogRef<DialogEditPotComponent>,
-    @Inject(Firestore) private firestore: Firestore
+    @Inject(Firestore) private firestore: Firestore,
+    @Inject(MAT_DIALOG_DATA) public data: Pot
   ) { }
 
   ngOnInit(): void {
@@ -45,8 +46,8 @@ export class DialogEditPotComponent {
         console.log(changes);
         this.allPots = changes;
 
-        if (changes.length > 0) {
-          Object.assign(this.pot, changes[0]);
+        if (this.data) {
+          this.pot = new Pot(this.data);
         }
       }
     );
@@ -56,7 +57,19 @@ export class DialogEditPotComponent {
     this.dialogRef.close();
   }
 
-  editPot() {
-    // Add code here
+  async editPot() {
+    if (!this.pot.id) {
+      console.error('Fehler: Keine Dokument-ID vorhanden!');
+      return;
+    }
+  
+    try {
+      const potDocRef = doc(this.firestore, 'pots', this.pot.id);
+      await updateDoc(potDocRef, this.pot.toJSON());
+      console.log('Pot erfolgreich aktualisiert:', this.pot);
+      this.dialogRef.close(this.pot);
+    } catch (error) {
+      console.error('Fehler beim Aktualisieren des Pots:', error);
+    }
   }
 }

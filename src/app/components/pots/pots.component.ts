@@ -10,6 +10,7 @@ import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatIconModule } from '@angular/material/icon';
+import { PortalHost } from '@angular/cdk/portal';
 
 @Component({
   selector: 'app-pots',
@@ -54,9 +55,9 @@ export class PotsComponent implements OnInit {
     this.dialog.open(DialogAddPotComponent);
   }
 
-  openEditDialog(pot: any) {
+  openEditDialog(pot: Pot) {
     this.dialog.open(DialogEditPotComponent, {
-      data: this.pot,
+      data: pot
     });
   }
 }
