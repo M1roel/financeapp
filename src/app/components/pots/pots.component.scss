@@ -40,6 +40,7 @@
       height: 303px;
       background-color: white;
       border-radius: 12px;
+      box-sizing: border-box;
       padding: 24px;
 
       .pot-head {
@@ -62,6 +63,7 @@
         }
 
         button[mat-icon-button] {
+          color: v.$grey300;
           background-color: transparent;
           box-shadow: none;
           border: none;
@@ -72,6 +74,7 @@
       .pot-mid {
         .pot-mid-total{
           @include m.flexBox(row, space-between, center);
+          margin-bottom: 16px;
 
           span{
             @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
@@ -79,6 +82,10 @@
           div {
             @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
           }
+        }
+
+        .pot-mid-progress {
+          margin-bottom: 16px;
         }
 
         .pot-mid-target {
