@@ -31,6 +31,9 @@
     width: 100%;
 
     .pot-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 518px;
       min-width: 320px;
       height: 303px;
@@ -72,6 +75,28 @@
 
         .pot-mid-target {
           @include m.flexBox(row, space-between, center);
+
+          .pot-mid-target-percent {
+            @include m.styleFont("PS-Bold", 12px, 400, 1.5, v.$grey500);
+          }
+
+          .pot-mid-target-val {
+            @include m.styleFont("PS-Regular", 12px, 400, 1.5, v.$grey500);
+          }
+        }
+      }
+
+      .pot-btn {
+        @include m.flexBox(row, flex-end, center);
+
+        button {
+          @include m.styleFont("PS-Bold", 14px, 400, 1.5, v.$grey900);
+          width: 50%;
+          height: 53px;
+          background-color: v.$beige100;
+          border-radius: 8px;
+          border: none;
+          cursor: pointer;
         }
       }
     }

@@ -21,16 +21,16 @@
       <div class="pot-mid">
         <div class="pot-mid-total">
           <span>{{ "POTS.TOTAL" | translate }}</span>
-          <div>{{ pot.total_saved }}</div>
+          <div>{{"DASHBOARD.SIGN" | translate }}{{ pot.total_saved }}</div>
         </div>
         <div class="pot-mid-progress">
-          <mat-progress-bar mode="determinate" value="{{ (pot.total_saved / pot.target * 100) | number:'1.2-2' }}"></mat-progress-bar>
+          <mat-progress-bar mode="determinate" value="{{ (pot.total_saved / pot.target * 100) | number:'1.1-1' }}"></mat-progress-bar>
         </div>
         <div class="pot-mid-target">
             <span class="pot-mid-target-percent">
-            {{ (pot.total_saved / pot.target * 100) | number:'1.2-2' }}%
+            {{ (pot.total_saved / pot.target * 100) | number:'1.1-1' }}%
             </span>
-          <div>{{ pot.target }}</div>
+          <div class="pot-mid-target-val">{{"DASHBOARD.SIGN" | translate }}{{ pot.target }}</div>
         </div>
       </div>
       <div class="pot-btn">
