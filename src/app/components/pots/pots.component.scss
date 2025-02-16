@@ -35,7 +35,8 @@
       flex-direction: column;
       justify-content: space-between;
       flex: 1 1 33%;
-      max-width: 518px;
+      flex-grow: 1;
+      flex-basis: 518px;
       min-width: 320px;
       height: 303px;
       background-color: white;
