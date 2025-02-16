@@ -3,6 +3,7 @@ import { TranslateService } from '@ngx-translate/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogAddPotComponent } from '../../dialogs/dialog-add-pot/dialog-add-pot.component';
+import { DialogEditPotComponent } from '../../dialogs/dialog-edit-pot/dialog-edit-pot.component';
 import { Pot } from '../../models/pot.class';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
@@ -49,7 +50,13 @@ export class PotsComponent implements OnInit {
     );
   }
 
-  openDialog() {
+  openAddDialog() {
     this.dialog.open(DialogAddPotComponent);
+  }
+
+  openEditDialog(pot: any) {
+    this.dialog.open(DialogEditPotComponent, {
+      data: this.pot,
+    });
   }
 }

@@ -1,7 +1,7 @@
 <section class="pots-main">
   <div class="pots-headline">
     <h1>{{ "POTS.TITLE" | translate }}</h1>
-    <button (click)="openDialog()">{{ "POTS.ADD" | translate }}</button>
+    <button (click)="openAddDialog()">{{ "POTS.ADD" | translate }}</button>
   </div>
 
   <article class="pots-list">
@@ -18,7 +18,7 @@
           <mat-icon>more_vert</mat-icon>
         </button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>
+          <button mat-menu-item (click)="openEditDialog(pot)">
             <span>{{ "POTS.EDIT" | translate }}</span>
           </button>
           <button mat-menu-item>
