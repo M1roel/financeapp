@@ -57,6 +57,23 @@
           }
         }
       }
+
+      .pot-mid {
+        .pot-mid-total{
+          @include m.flexBox(row, space-between, center);
+
+          span{
+            @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
+          }
+          div {
+            @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
+          }
+        }
+
+        .pot-mid-target {
+          @include m.flexBox(row, space-between, center);
+        }
+      }
     }
   }
 }

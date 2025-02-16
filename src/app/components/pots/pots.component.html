@@ -8,16 +8,30 @@
     <div *ngFor="let pot of allPots" class="pot-item">
       <div class="pot-head">
         <div class="pot-head-left">
-          <div class="pot-color" [ngStyle]="{ 'background-color': pot.theme_color }"></div> 
+          <div
+            class="pot-color"
+            [ngStyle]="{ 'background-color': pot.theme_color }"
+          ></div>
           <div class="pot-name">{{ pot.name }}</div>
         </div>
         <div class="pot-head-menu">
-          <img src="../../../assets/images/close_btn.png" alt="burger menu">
+          <img src="../../../assets/images/close_btn.png" alt="burger menu" />
         </div>
       </div>
       <div class="pot-mid">
-        <div>{{ pot.total_saved }}</div>
-        <div>{{ pot.target }}</div>
+        <div class="pot-mid-total">
+          <span>{{ "POTS.TOTAL" | translate }}</span>
+          <div>{{ pot.total_saved }}</div>
+        </div>
+        <div class="pot-mid-progress">
+          <mat-progress-bar mode="determinate" value="{{ (pot.total_saved / pot.target * 100) | number:'1.2-2' }}"></mat-progress-bar>
+        </div>
+        <div class="pot-mid-target">
+            <span class="pot-mid-target-percent">
+            {{ (pot.total_saved / pot.target * 100) | number:'1.2-2' }}%
+            </span>
+          <div>{{ pot.target }}</div>
+        </div>
       </div>
       <div class="pot-btn">
         <button>{{ "POTS.ADD_MONEY" | translate }}</button>
