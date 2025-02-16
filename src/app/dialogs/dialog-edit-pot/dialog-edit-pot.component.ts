@@ -1,8 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialogRef, MatDialogModule } from '@angular/material/dialog';
 import { Pot } from '../../models/pot.class';
-import { Firestore, addDoc, collection } from '@angular/fire/firestore';
+import { Firestore, addDoc, collection, collectionData } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
@@ -15,6 +15,7 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './dialog-edit-pot.component.scss',
 })
 export class DialogEditPotComponent {
+
   colorOptions = [
     { value: 'green', labelKey: 'POTS.ADD_POT.THEME_COLOR.GREEN' },
     { value: 'yellow', labelKey: 'POTS.ADD_POT.THEME_COLOR.YELLOW' },
@@ -28,12 +29,28 @@ export class DialogEditPotComponent {
     { value: 'blue', labelKey: 'POTS.ADD_POT.THEME_COLOR.BLUE' },
   ];
 
-  pot = new Pot();
+  pot = Pot;
+  allPots: any;
 
   constructor(
     private dialogRef: MatDialogRef<DialogEditPotComponent>,
     @Inject(Firestore) private firestore: Firestore
-  ) {}
+  ) { }
+
+  ngOnInit(): void {
+    const potCollection = collection(this.firestore, 'pots');
+
+    collectionData(potCollection, { idField: 'id' }).subscribe(
+      (changes: any) => {
+        console.log(changes);
+        this.allPots = changes;
+
+        if (changes.length > 0) {
+          Object.assign(this.pot, changes[0]);
+        }
+      }
+    );
+  }
 
   closeDialog() {
     this.dialogRef.close();

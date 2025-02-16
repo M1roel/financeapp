@@ -46,6 +46,28 @@
         "BROWN": "Braun",
         "MAGENTA": "Magenta"
       }
+    },
+    "EDIT_POT": {
+      "TITLE": "Sparziel bearbeiten",
+      "DESCRIPTION": "Wenn sich Ihre Ziele ändern, können Sie Ihre Sparziele gerne aktualisieren.",
+      "NAME": "Sparziel Bezeichnung",
+      "TARGET": "Zielbetrag",
+      "THEME": "Thema",
+      "SAVE": "Änderungen speichern",
+      "THEME_COLOR": {
+        "BLUE": "Blau",
+        "GREEN": "Grün",
+        "ORANGE": "Orange",
+        "PINK": "Pink",
+        "PURPLE": "Lila",
+        "RED": "Rot",
+        "YELLOW": "Gelb",
+        "CYAN": "Cyan",
+        "NAVY": "Marineblau",
+        "TORQUOISE": "Türkis",
+        "BROWN": "Braun",
+        "MAGENTA": "Magenta"
+      }
     }
   },
   "TRANSACTIONS": {

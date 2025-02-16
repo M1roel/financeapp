@@ -46,6 +46,28 @@
         "BROWN": "Brown",
         "MAGENTA": "Magenta"
       }
+    },
+    "EDIT_POT": {
+      "TITLE": "Edit Pot",
+      "DESCRIPTION": "If your saving targets change, feel free to update your pots.",
+      "NAME": "Pot Name",
+      "TARGET": "Target",
+      "THEME": "Theme",
+      "SAVE": "Save Changes",
+      "THEME_COLOR": {
+        "BLUE": "Blue",
+        "GREEN": "Green",
+        "ORANGE": "Orange",
+        "PINK": "Pink",
+        "PURPLE": "Purple",
+        "RED": "Red",
+        "YELLOW": "Yellow",
+        "CYAN": "Cyan",
+        "NAVY": "Navy",
+        "TORQUOISE": "Torquoise",
+        "BROWN": "Brown",
+        "MAGENTA": "Magenta"
+      }
     }
   },
   "TRANSACTIONS": {
