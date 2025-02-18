@@ -68,6 +68,12 @@
         "BROWN": "Brown",
         "MAGENTA": "Magenta"
       }
+    },
+    "DELETE_POT": {
+      "TITLE": "Delete",
+      "DESCRIPTION": "Are you sure you want to delete this pot? This action cannot be reversed, and all the data inside it will be removed forever.",
+      "CANCEL": "No, Go Back",
+      "DELETE": "Yes, Confirm Deletion"
     }
   },
   "TRANSACTIONS": {

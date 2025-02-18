@@ -68,6 +68,12 @@
         "BROWN": "Braun",
         "MAGENTA": "Magenta"
       }
+    },
+    "DELETE_POT": {
+      "TITLE": "Löschen",
+      "DESCRIPTION": "Möchten Sie dieses Sparziel wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "CANCEL": "Nein, abbrechen",
+      "DELETE": "Ja, löschen"
     }
   },
   "TRANSACTIONS": {
