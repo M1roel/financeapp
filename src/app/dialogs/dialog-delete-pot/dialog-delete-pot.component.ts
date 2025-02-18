@@ -44,12 +44,10 @@ export class DialogDeletePotComponent {
   }
 
   async deletePot(pot: Pot) {
-    console.log('deletePot', pot);
     const potDoc = doc(this.firestore, `pots/${pot.id}`);
     try {      
       await this.closeDialog();
       await deleteDoc(potDoc);
-      console.log('Pot deleted successfully');
     } catch (error) {
       console.error('Error deleting pot: ', error);
     };
