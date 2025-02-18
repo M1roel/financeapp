@@ -1,0 +1,14 @@
+<section class="delete-pot-main">
+    <div class="delete-pot-headline">
+        <h2>{{ "POTS.DELETE_POT.TITLE" | translate }}</h2>
+        <img src="../../../assets/images/close_btn.png" alt="close button" (click)="closeDialog()">
+    </div>
+    <div class="delete-pot-description">
+        <p>{{ "POTS.DELETE_POT.DESCRIPTION" | translate }}</p>
+    </div>
+    <div class="delete-pot-name">
+        <label for="name">{{ "POTS.DELETE_POT.NAME" | translate }}</label>
+        <input type="text" id="name" [(ngModel)]="pot.name" placeholder="" disabled/>
+    </div>
+    <button class="delete-pot-delete" (click)="deletePot(pot)">{{ "POTS.DELETE_POT.DELETE" | translate }}</button>
+</section>

@@ -4,8 +4,9 @@ import { TranslateModule } from '@ngx-translate/core';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogAddPotComponent } from '../../dialogs/dialog-add-pot/dialog-add-pot.component';
 import { DialogEditPotComponent } from '../../dialogs/dialog-edit-pot/dialog-edit-pot.component';
+import { DialogDeletePotComponent } from '../../dialogs/dialog-delete-pot/dialog-delete-pot.component';
 import { Pot } from '../../models/pot.class';
-import { Firestore, collection, collectionData, doc, deleteDoc } from '@angular/fire/firestore';
+import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatMenuModule } from '@angular/material/menu';
@@ -60,14 +61,9 @@ export class PotsComponent implements OnInit {
     });
   }
 
-  async deletePot(pot: Pot) {
-    console.log('deletePot', pot);
-    const potDoc = doc(this.firestore, `pots/${pot.id}`);
-    try {
-      await deleteDoc(potDoc);
-      console.log('Pot deleted successfully');
-    } catch (error) {
-      console.error('Error deleting pot: ', error);
-    };
+  openDeleteDialog(pot: Pot) {
+    this.dialog.open(DialogDeletePotComponent, {
+      data: pot
+    });
   }
 }

@@ -46,8 +46,8 @@ export class DialogEditPotComponent {
         console.log(changes);
         this.allPots = changes;
 
-        if (this.data) {
-          this.pot = new Pot(this.data);
+        if (changes.length > 0) {
+          Object.assign(this.pot, changes[0]);
         }
       }
     );
