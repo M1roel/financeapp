@@ -74,6 +74,14 @@
       "DESCRIPTION": "Are you sure you want to delete this pot? This action cannot be reversed, and all the data inside it will be removed forever.",
       "CANCEL": "No, Go Back",
       "DELETE": "Yes, Confirm Deletion"
+    },
+    "WITHDRAW_POT": {
+      "TITLE": "Withdraw",
+      "DESCRIPTION": "How much would you like to withdraw from this pot?",
+      "NEW": "New Amount",
+      "TARGET": "Target of",
+      "AMOUNT": "Amount to Withdraw",
+      "WITHDRAW": "Confirm Withdraw"
     }
   },
   "TRANSACTIONS": {

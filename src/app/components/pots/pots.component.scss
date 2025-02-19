@@ -69,6 +69,10 @@
           box-shadow: none;
           border: none;
           cursor: pointer;
+
+          &:hover {
+            color: v.$grey500;
+          }
         }
       }
 
@@ -113,6 +117,11 @@
           border-radius: 8px;
           border: none;
           cursor: pointer;
+          transition: 125ms background-color ease-in-out;
+
+          &:hover {
+            background-color: v.$beige500;
+          }
 
           &:first-child {
             margin-right: 16px;

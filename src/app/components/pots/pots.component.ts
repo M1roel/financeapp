@@ -5,6 +5,7 @@ import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DialogAddPotComponent } from '../../dialogs/dialog-add-pot/dialog-add-pot.component';
 import { DialogEditPotComponent } from '../../dialogs/dialog-edit-pot/dialog-edit-pot.component';
 import { DialogDeletePotComponent } from '../../dialogs/dialog-delete-pot/dialog-delete-pot.component';
+import { DialogWithdrawPotComponent } from '../../dialogs/dialog-withdraw-pot/dialog-withdraw-pot.component';
 import { Pot } from '../../models/pot.class';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 import { CommonModule } from '@angular/common';
@@ -63,6 +64,12 @@ export class PotsComponent implements OnInit {
 
   openDeleteDialog(pot: Pot) {
     this.dialog.open(DialogDeletePotComponent, {
+      data: pot
+    });
+  }
+
+  openWithdrawDialog(pot: Pot) {
+    this.dialog.open(DialogWithdrawPotComponent, {
       data: pot
     });
   }

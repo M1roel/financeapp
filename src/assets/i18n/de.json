@@ -74,6 +74,14 @@
       "DESCRIPTION": "Möchten Sie dieses Sparziel wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
       "CANCEL": "Nein, abbrechen",
       "DELETE": "Ja, löschen"
+    },
+    "WITHDRAW_POT": {
+      "TITLE": "Abheben",
+      "DESCRIPTION": "Wie viel möchten Sie abheben?",
+      "NEW": "Neuer Betrag",
+      "TARGET": "Zielbetrag",
+      "AMOUNT": "Betrag",
+      "WITHDRAW": "Abheben"
     }
   },
   "TRANSACTIONS": {
