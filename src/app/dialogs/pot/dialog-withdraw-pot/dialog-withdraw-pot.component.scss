@@ -84,4 +84,20 @@
       }
     }
   }
+
+  button {
+    @include m.styleFont("PS-Bold", 14px, 400, 1.5, white);
+    width: 100%;
+    height: 53px;
+    margin-top: 16px;
+    cursor: pointer;
+    background-color: v.$grey900;
+    border: none;
+    border-radius: 8px;
+    transition: 125ms background-color ease-in-out;
+
+    &:hover {
+      background-color: v.$red;
+    }
+  }
 }

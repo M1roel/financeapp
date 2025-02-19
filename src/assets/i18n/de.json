@@ -82,7 +82,7 @@
       "NEW": "Neuer Betrag",
       "TARGET": "Zielbetrag",
       "AMOUNT": "Betrag abheben",
-      "WITHDRAW": "Abheben"
+      "WITHDRAW": "Abheben bestätigen"
     },
     "ADD_MONEY_POT": {
       "TITLE": "Geld hinzufügen",
@@ -90,7 +90,7 @@
       "NEW": "Neuer Betrag",
       "TARGET": "Zielbetrag",
       "AMOUNT": "Betrag hinzufügen",
-      "ADD": "Hinzufügen"
+      "ADD": "Hinzufügen bestätigen"
     }
   },
   "TRANSACTIONS": {

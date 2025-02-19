@@ -33,7 +33,8 @@
     </div>
     <div class="add-amount">
       <label for="add-amount">{{"POTS.ADD_MONEY_POT.AMOUNT" | translate }}</label>
-      <input type="number">
+      <input type="number" [(ngModel)]="amountToAdd">
     </div>
+    <button (click)="updateTotalSaved(pot)">{{"POTS.ADD_MONEY_POT.ADD" | translate }}</button>
   </section>
   
