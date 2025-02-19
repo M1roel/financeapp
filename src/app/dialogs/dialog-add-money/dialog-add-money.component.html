@@ -1,0 +1,35 @@
+<section class="add-money-pot-main">
+    <div class="add-money-pot-headline">
+      <h2>{{ "POTS.ADD_MONEY_POT.TITLE" | translate }} ´{{ pot.name }}´?</h2>
+      <img
+        src="../../../assets/images/close_btn.png"
+        alt="close button"
+        (click)="closeDialog()"
+      />
+    </div>
+    <div class="add-money-pot-description">
+      <p>{{ "POTS.ADD_MONEY_POT.DESCRIPTION" | translate }}</p>
+    </div>
+    <div class="pot-mid">
+      <div class="pot-mid-total">
+        <span>{{ "POTS.ADD_MONEY_POT.NEW" | translate }}</span>
+        <div>{{ "DASHBOARD.SIGN" | translate }}{{ pot.total_saved }}</div>
+      </div>
+      <div class="pot-mid-progress">
+        <mat-progress-bar
+          mode="determinate"
+          value="{{ (pot.total_saved / pot.target) * 100 | number : '1.1-1' }}"
+        ></mat-progress-bar>
+      </div>
+      <div class="pot-mid-target">
+        <span class="pot-mid-target-percent">
+          {{ (pot.total_saved / pot.target) * 100 | number : "1.1-1" }}%
+        </span>
+        <div class="pot-mid-target-val">
+          {{ "POTS.ADD_MONEY_POT.TARGET" | translate }}
+          {{ "DASHBOARD.SIGN" | translate }}{{ pot.target }}
+        </div>
+      </div>
+    </div>
+  </section>
+  

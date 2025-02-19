@@ -25,7 +25,7 @@
     "DELETE": "Delete Pot",
     "WITHDRAW": "Withdraw",
     "TOTAL": "Total Saved",
-    "TARGET": "Target",
+    "TARGET": "Target of",
     "ADD_POT": {
       "TITLE": "Add New Pot",
       "DESCRIPTION": "Create a pot to set savings targets. These can help keep you on track as you save for special purchases.",
@@ -83,6 +83,14 @@
       "TARGET": "Target of",
       "AMOUNT": "Amount to Withdraw",
       "WITHDRAW": "Confirm Withdraw"
+    },
+    "ADD_MONEY_POT": {
+      "TITLE": "Add Money",
+      "DESCRIPTION": "How much would you like to add to this pot?",
+      "NEW": "New Amount",
+      "TARGET": "Target of",
+      "AMOUNT": "Amount to Add",
+      "ADD": "Confirm Add"
     }
   },
   "TRANSACTIONS": {

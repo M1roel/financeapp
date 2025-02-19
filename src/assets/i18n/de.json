@@ -83,6 +83,14 @@
       "TARGET": "Zielbetrag",
       "AMOUNT": "Betrag",
       "WITHDRAW": "Abheben"
+    },
+    "ADD_MONEY_POT": {
+      "TITLE": "Geld hinzufügen",
+      "DESCRIPTION": "Wie viel möchten Sie hinzufügen?",
+      "NEW": "Neuer Betrag",
+      "TARGET": "Zielbetrag",
+      "AMOUNT": "Betrag",
+      "ADD": "Hinzufügen"
     }
   },
   "TRANSACTIONS": {

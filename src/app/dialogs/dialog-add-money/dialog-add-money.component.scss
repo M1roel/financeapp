@@ -1,0 +1,56 @@
+@use "../../../../src/mixins.scss" as m;
+@use "../../../../src/variables.scss" as v;
+
+.add-money-pot-main {
+    padding: 32px;
+    box-sizing: border-box;
+
+    .add-money-pot-headline {
+        @include m.flexBox(row, space-between, center);
+
+        h2 {
+            @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
+            margin: 0;
+        }
+
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    .add-money-pot-description {
+        @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
+        margin-top: 16px;
+    }
+
+    .pot-mid {
+        .pot-mid-total{
+          @include m.flexBox(row, space-between, center);
+          margin-bottom: 16px;
+
+          span{
+            @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
+          }
+          div {
+            @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
+          }
+        }
+
+        .pot-mid-progress {
+          margin-bottom: 16px;
+        }
+
+        .pot-mid-target {
+          @include m.flexBox(row, space-between, center);
+
+          .pot-mid-target-percent {
+            @include m.styleFont("PS-Bold", 12px, 400, 1.5, v.$grey500);
+          }
+
+          .pot-mid-target-val {
+            @include m.styleFont("PS-Regular", 12px, 400, 1.5, v.$grey500);
+          }
+        }
+      }
+}

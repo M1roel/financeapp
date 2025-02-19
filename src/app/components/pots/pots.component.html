@@ -43,7 +43,7 @@
         </div>
       </div>
       <div class="pot-btn">
-        <button>{{ "POTS.ADD_MONEY" | translate }}</button>
+        <button (click)="openAddMoneyDialog(pot)">{{ "POTS.ADD_MONEY" | translate }}</button>
         <button (click)="openWithdrawDialog(pot)">{{ "POTS.WITHDRAW" | translate }}</button>
       </div>
     </div>
