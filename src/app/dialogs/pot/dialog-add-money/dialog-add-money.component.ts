@@ -33,7 +33,7 @@ import { FormsModule } from '@angular/forms';
 export class DialogAddMoneyComponent {
   pot = new Pot();
   allPots: any[] = [];
-  amountToAdd: number = 0;
+  amountToAdd: number | null = null;
 
   constructor(
     @Inject(Firestore) private firestore: Firestore,
@@ -53,7 +53,7 @@ export class DialogAddMoneyComponent {
 
   async updateTotalSaved(pot: Pot) {
     if (this.data?.id) {
-      if (this.amountToAdd <= 0) {
+      if (this.amountToAdd === null || this.amountToAdd <= 0) {
         console.error('Bitte einen gültigen Betrag eingeben.');
         return;
       }

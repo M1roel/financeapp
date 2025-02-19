@@ -33,7 +33,7 @@
   </div>
   <div class="withdraw-amount">
     <label for="withdraw-amount">{{"POTS.WITHDRAW_POT.AMOUNT" | translate }}</label>
-    <input type="number">
+    <input type="number" [(ngModel)]="amountToWithdraw">
   </div>
-  <button>{{"POTS.WITHDRAW_POT.WITHDRAW" | translate }}</button>
+  <button (click)="updateTotalSaved(pot)">{{"POTS.WITHDRAW_POT.WITHDRAW" | translate }}</button>
 </section>
