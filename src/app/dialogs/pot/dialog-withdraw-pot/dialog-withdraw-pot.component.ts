@@ -25,18 +25,9 @@ export class DialogWithdrawPotComponent {
   ) {}
 
   ngOnInit(): void {
-    const potCollection = collection(this.firestore, 'pots');
-
-    collectionData(potCollection, { idField: 'id' }).subscribe(
-      (changes: any) => {
-        console.log(changes);
-        this.allPots = changes;
-
-        if (changes.length > 0) {
-          Object.assign(this.pot, changes[0]);
-        }
-      }
-    );
+    if (this.data) {
+      this.pot = this.data;
+    }
   }
 
   closeDialog() {
