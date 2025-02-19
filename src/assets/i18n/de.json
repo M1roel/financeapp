@@ -81,7 +81,7 @@
       "DESCRIPTION": "Wie viel möchten Sie abheben?",
       "NEW": "Neuer Betrag",
       "TARGET": "Zielbetrag",
-      "AMOUNT": "Betrag",
+      "AMOUNT": "Betrag abheben",
       "WITHDRAW": "Abheben"
     },
     "ADD_MONEY_POT": {
@@ -89,7 +89,7 @@
       "DESCRIPTION": "Wie viel möchten Sie hinzufügen?",
       "NEW": "Neuer Betrag",
       "TARGET": "Zielbetrag",
-      "AMOUNT": "Betrag",
+      "AMOUNT": "Betrag hinzufügen",
       "ADD": "Hinzufügen"
     }
   },

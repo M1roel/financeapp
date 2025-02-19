@@ -24,6 +24,21 @@ export class DialogAddMoneyComponent {
     private dialogRef: MatDialogRef<DialogAddMoneyComponent>
   ) {}
 
+  ngOnInit(): void {
+    const potCollection = collection(this.firestore, 'pots');
+
+    collectionData(potCollection, { idField: 'id' }).subscribe(
+      (changes: any) => {
+        console.log(changes);
+        this.allPots = changes;
+
+        if (changes.length > 0) {
+          Object.assign(this.pot, changes[0]);
+        }
+      }
+    );
+  }
+  
   closeDialog() {
     this.dialogRef.close();
   }

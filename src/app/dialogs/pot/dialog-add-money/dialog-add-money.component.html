@@ -1,6 +1,6 @@
 <section class="add-money-pot-main">
     <div class="add-money-pot-headline">
-      <h2>{{ "POTS.ADD_MONEY_POT.TITLE" | translate }} ´{{ pot.name }}´?</h2>
+      <h2>{{ "POTS.ADD_MONEY_POT.TITLE" | translate }} `{{ pot.name }}`?</h2>
       <img
         src="../../../assets/images/close_btn.png"
         alt="close button"
@@ -30,6 +30,10 @@
           {{ "DASHBOARD.SIGN" | translate }}{{ pot.target }}
         </div>
       </div>
+    </div>
+    <div class="add-amount">
+      <label for="add-amount">{{"POTS.ADD_MONEY_POT.AMOUNT" | translate }}</label>
+      <input type="number">
     </div>
   </section>
   

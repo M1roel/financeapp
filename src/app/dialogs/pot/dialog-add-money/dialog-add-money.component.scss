@@ -2,55 +2,86 @@
 @use "../../../../../src/variables.scss" as v;
 
 .add-money-pot-main {
-    padding: 32px;
-    box-sizing: border-box;
+  width: 518px;
+  padding: 32px;
+  box-sizing: border-box;
 
-    .add-money-pot-headline {
-        @include m.flexBox(row, space-between, center);
+  .add-money-pot-headline {
+    @include m.flexBox(row, space-between, center);
 
-        h2 {
-            @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
-            margin: 0;
-        }
-
-
-        img {
-            cursor: pointer;
-        }
+    h2 {
+      @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
+      margin: 0;
     }
 
-    .add-money-pot-description {
+    img {
+      cursor: pointer;
+    }
+  }
+
+  .add-money-pot-description {
+    @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
+    margin-top: 16px;
+  }
+
+  .pot-mid {
+    .pot-mid-total {
+      @include m.flexBox(row, space-between, center);
+      margin-bottom: 16px;
+
+      span {
         @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
-        margin-top: 16px;
+      }
+      div {
+        @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
+      }
     }
 
-    .pot-mid {
-        .pot-mid-total{
-          @include m.flexBox(row, space-between, center);
-          margin-bottom: 16px;
+    .pot-mid-progress {
+      margin-bottom: 16px;
+    }
 
-          span{
-            @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
-          }
-          div {
-            @include m.styleFont("PS-Regular", 32px, 400, 1.2, v.$grey900);
-          }
-        }
+    .pot-mid-target {
+      @include m.flexBox(row, space-between, center);
 
-        .pot-mid-progress {
-          margin-bottom: 16px;
-        }
-
-        .pot-mid-target {
-          @include m.flexBox(row, space-between, center);
-
-          .pot-mid-target-percent {
-            @include m.styleFont("PS-Bold", 12px, 400, 1.5, v.$grey500);
-          }
-
-          .pot-mid-target-val {
-            @include m.styleFont("PS-Regular", 12px, 400, 1.5, v.$grey500);
-          }
-        }
+      .pot-mid-target-percent {
+        @include m.styleFont("PS-Bold", 12px, 400, 1.5, v.$grey500);
       }
+
+      .pot-mid-target-val {
+        @include m.styleFont("PS-Regular", 12px, 400, 1.5, v.$grey500);
+      }
+    }
+  }
+
+  .add-amount {
+    @include m.flexBox(column, center, flex-start);
+    margin-top: 16px;
+
+    label {
+      @include m.styleFont("PS-Bold", 12px, 400, 1.5, v.$grey500);
+    }
+
+    input {
+      width: 100%;
+      height: 45px;
+      padding: 20px 12px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      border: 1px solid v.$grey300;
+
+      appearance: textfield;
+      -moz-appearance: textfield;
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+
+      &:focus {
+        border: 1px solid v.$grey300;
+        outline: none;
+      }
+    }
+  }
 }
