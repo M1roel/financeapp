@@ -3,11 +3,13 @@ import { MatDialogModule, MAT_DIALOG_DATA, MatDialogRef } from '@angular/materia
 import { TranslateModule } from '@ngx-translate/core';
 import { Pot } from '../../models/pot.class';
 import { Firestore, doc, updateDoc, collection, collectionData } from '@angular/fire/firestore';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-dialog-withdraw-pot',
   standalone: true,
-  imports: [TranslateModule, MatDialogModule],
+  imports: [TranslateModule, MatDialogModule, MatProgressBarModule, CommonModule],
   templateUrl: './dialog-withdraw-pot.component.html',
   styleUrl: './dialog-withdraw-pot.component.scss'
 })

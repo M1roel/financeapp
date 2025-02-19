@@ -25,6 +25,7 @@
     "DELETE": "Sparziel löschen",
     "WITHDRAW": "Abheben",
     "TOTAL": "Gespart",
+    "TARGET": "Zielbetrag",
     "ADD_POT": {
       "TITLE": "Neues Sparziel",
       "DESCRIPTION": "Erstellen Sie ein Sparziel, um Sparziele festzulegen. Diese können Ihnen helfen, auf Kurs zu bleiben, während Sie für besondere Einkäufe sparen.",
