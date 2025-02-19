@@ -1,5 +1,5 @@
-@use '../../../mixins.scss' as m;
-@use '../../../variables.scss' as v;
+@use "../../../../../src/mixins.scss" as m;
+@use "../../../../../src/variables.scss" as v;
 
 .pot-main {
     @include m.flexBox(column, center, flex-start);

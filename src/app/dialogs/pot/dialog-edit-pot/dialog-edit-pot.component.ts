@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { MatDialogRef, MatDialogModule, MAT_DIALOG_DATA } from '@angular/material/dialog';
-import { Pot } from '../../models/pot.class';
+import { Pot } from '../../../models/pot.class';
 import { Firestore, updateDoc, collection, collectionData, doc } from '@angular/fire/firestore';
 import { Inject } from '@angular/core';
 import { CommonModule } from '@angular/common';

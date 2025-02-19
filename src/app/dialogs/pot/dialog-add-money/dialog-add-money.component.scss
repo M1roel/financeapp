@@ -1,11 +1,11 @@
-@use "../../../../src/mixins.scss" as m;
-@use "../../../../src/variables.scss" as v;
+@use "../../../../../src/mixins.scss" as m;
+@use "../../../../../src/variables.scss" as v;
 
-.withdraw-pot-main {
+.add-money-pot-main {
     padding: 32px;
     box-sizing: border-box;
 
-    .withdraw-pot-headline {
+    .add-money-pot-headline {
         @include m.flexBox(row, space-between, center);
 
         h2 {
@@ -19,7 +19,7 @@
         }
     }
 
-    .withdraw-pot-description {
+    .add-money-pot-description {
         @include m.styleFont("PS-Regular", 14px, 400, 1.5, v.$grey500);
         margin-top: 16px;
     }
