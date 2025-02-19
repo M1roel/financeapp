@@ -13,17 +13,17 @@
     <div class="pot-mid">
       <div class="pot-mid-total">
         <span>{{ "POTS.ADD_MONEY_POT.NEW" | translate }}</span>
-        <div>{{ "DASHBOARD.SIGN" | translate }}{{ pot.total_saved }}</div>
+        <div>{{ "DASHBOARD.SIGN" | translate }}{{ getUpdatedTotalSaved() }}</div>
       </div>
       <div class="pot-mid-progress">
         <mat-progress-bar
           mode="determinate"
-          value="{{ (pot.total_saved / pot.target) * 100 | number : '1.1-1' }}"
+          [value]="getUpdatedProgress()"
         ></mat-progress-bar>
       </div>
       <div class="pot-mid-target">
         <span class="pot-mid-target-percent">
-          {{ (pot.total_saved / pot.target) * 100 | number : "1.1-1" }}%
+          {{ getUpdatedProgress() | number : "1.1-1" }}%
         </span>
         <div class="pot-mid-target-val">
           {{ "POTS.ADD_MONEY_POT.TARGET" | translate }}

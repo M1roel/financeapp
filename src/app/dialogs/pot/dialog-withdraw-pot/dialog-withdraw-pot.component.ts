@@ -32,6 +32,14 @@ export class DialogWithdrawPotComponent {
     }
   }
 
+  getUpdatedTotalSaved(): number {
+    return Math.max(0, this.pot.total_saved - (this.amountToWithdraw || 0));
+  }
+
+  getUpdatedProgress(): number {
+    return (this.getUpdatedTotalSaved() / this.pot.target) * 100;
+  }
+
   closeDialog() {
     this.dialogRef.close();
   }

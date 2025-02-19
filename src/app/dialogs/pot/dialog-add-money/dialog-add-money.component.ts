@@ -47,6 +47,16 @@ export class DialogAddMoneyComponent {
     }
   }
 
+   /** Berechnet den aktualisierten Betrag, ohne ihn in Firestore zu speichern */
+   getUpdatedTotalSaved(): number {
+    return this.pot.total_saved + (this.amountToAdd || 0);
+  }
+
+  /** Berechnet den aktualisierten Fortschritt in % */
+  getUpdatedProgress(): number {
+    return (this.getUpdatedTotalSaved() / this.pot.target) * 100;
+  }
+
   closeDialog() {
     this.dialogRef.close();
   }
