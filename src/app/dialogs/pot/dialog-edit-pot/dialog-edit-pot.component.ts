@@ -39,25 +39,17 @@ export class DialogEditPotComponent {
   ) { }
 
   ngOnInit(): void {
-    const potCollection = collection(this.firestore, 'pots');
-
-    collectionData(potCollection, { idField: 'id' }).subscribe(
-      (changes: any) => {
-        console.log(changes);
-        this.allPots = changes;
-
-        if (changes.length > 0) {
-          Object.assign(this.pot, changes[0]);
-        }
-      }
-    );
+    if (this.data) {
+      this.pot = this.data;
+    }
   }
+
 
   closeDialog() {
     this.dialogRef.close();
   }
 
-  async editPot() {
+  async editPot(pot: Pot) {
     if (!this.pot.id) {
       console.error('Fehler: Keine Dokument-ID vorhanden!');
       return;
@@ -65,8 +57,11 @@ export class DialogEditPotComponent {
   
     try {
       const potDocRef = doc(this.firestore, 'pots', this.pot.id);
-      await updateDoc(potDocRef, this.pot.toJSON());
-      console.log('Pot erfolgreich aktualisiert:', this.pot);
+      await updateDoc(potDocRef, { 
+        name: this.pot.name,
+        target: this.pot.target,
+        theme_color: this.pot.theme_color
+      });      
       this.dialogRef.close(this.pot);
     } catch (error) {
       console.error('Fehler beim Aktualisieren des Pots:', error);
